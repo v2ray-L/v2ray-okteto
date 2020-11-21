@@ -11,6 +11,7 @@ rm -rf /tmp/v2ray
 # V2Ray new configuration
 install -d /usr/local/etc/v2ray
 curl --header "Content-Type:application/json" 'https://toolsbox.herokuapp.com/api/v2ray/config?addr=v2ray-okteto-libsgh.cloud.okteto.net&name=okteto&vpath=/ws&port=23323' > /usr/local/etc/v2ray/config.json
+cat /usr/local/etc/v2ray/config.json
 # Run V2Ray
 v2ray -config /usr/local/etc/v2ray/config.json &
 # Run nginx
